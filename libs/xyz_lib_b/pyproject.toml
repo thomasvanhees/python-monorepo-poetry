@@ -12,6 +12,7 @@ xyz_lib_c = "0.1.0"
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
 xyz_lib_c = { path = "../xyz_lib_c/", develop = true }
+pytest-cov = "^3.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

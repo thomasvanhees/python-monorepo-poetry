@@ -46,5 +46,5 @@ Welcome!
 - Create VENVs for every lib and app and add them in PyCharm. You probably have to rename them a bit.
 - Associate every sub-project with its correct interpreter from the VENVs you just made. Add this point everything should start working again.
 - Note: the sub-projects automatically add sources roots outside their folder structures based on the path installs you do in the VENV. But that is fine.
-- Create run configurations for every library and application. Also create a compound configuration to run them all. Save as a project file so it can be added to Git.
--
+- Create run configurations for every library and application. Also create a compound configuration to run them all. Save as a project file so it can be added to Git. Don't forget to set a `--cov=...` additional argument to get code coverage in the report.
+- The default arguments added for Pytest caused my coverage not to show up, so remove them in the advanced settings.
