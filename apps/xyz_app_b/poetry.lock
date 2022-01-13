@@ -203,7 +203,7 @@ xyz_lib_c = "0.1.0"
 
 [package.source]
 type = "directory"
-url = "../xyz_lib_b"
+url = "../../libs/xyz_lib_b"
 
 [[package]]
 name = "xyz-lib-c"
@@ -219,12 +219,12 @@ pydantic = "^1.8.2"
 
 [package.source]
 type = "directory"
-url = "../xyz_lib_c"
+url = "../../libs/xyz_lib_c"
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "7b79151b793b15dbd9d99cbd15f036fadb2e5de05f051cf9da149a463735550c"
+content-hash = "53eef2b0a1d04cc4a6982b92e95140dfef0c11d2b8baae65241906c97bb0e4da"
 
 [metadata.files]
 atomicwrites = [

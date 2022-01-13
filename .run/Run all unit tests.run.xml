@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run all unit tests" type="CompoundRunConfigurationType">
+    <toRun name="xyz_app_c" type="tests" />
+    <toRun name="xyz_lib_d" type="tests" />
+    <toRun name="xyz_lib_a" type="tests" />
+    <toRun name="xyz_lib_e" type="tests" />
+    <toRun name="xyz_app_d" type="tests" />
+    <toRun name="xyz_app_b" type="tests" />
+    <toRun name="xyz_lib_b" type="tests" />
+    <toRun name="xyz_lib_c" type="tests" />
+    <toRun name="xyz_app_a" type="tests" />
+    <method v="2" />
+  </configuration>
+</component>

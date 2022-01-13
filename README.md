@@ -35,3 +35,16 @@ Welcome!
 - One way to solve this chaining issue is to add the local development versions to the top of the chain. E.g., adding `lib_c` as a dev dependency to the `lib_a` `pyproject.toml`. Note that it does not need to be added as an official package.
 - Note that for some reason the dependencies need to be ordered in a specific way: dependencies lower down the chain should be placed above higher dependencies.
 - The `poetry.lock` will contain the packages of the development environment, so it should/will contain the local development packages, not the official releases!
+
+# PyCharm setup
+
+- Create a project at the root of the repo, in this case `python-monorepo-poetry`.
+- Configure your base Python installation as the interpreter for this project. I think it will not be used.
+- Configure content sources and exclude temporary folders.
+- At this point, check that imports from libraries and applications are correctly working. If not, remove the `.idea` folder at the repo root and try again. Note that at this point the lib/app imports are working because of the content roots, but any dependencies will not be recognized yet.
+- Now add additional projects to the existing project for every app and library. These seem to have their own content roots, that they may or may not inherit from the root project. At least they will only get roots limited to their own folder. So at this point the imports may stop working again.
+- Create VENVs for every lib and app and add them in PyCharm. You probably have to rename them a bit.
+- Associate every sub-project with its correct interpreter from the VENVs you just made. Add this point everything should start working again.
+- Note: the sub-projects automatically add sources roots outside their folder structures based on the path installs you do in the VENV. But that is fine.
+- Create run configurations for every library and application. Also create a compound configuration to run them all. Save as a project file so it can be added to Git.
+-

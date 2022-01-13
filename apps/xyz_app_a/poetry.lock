@@ -189,6 +189,22 @@ secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "cer
 socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
+name = "xyz-lib-a"
+version = "0.1.0"
+description = ""
+category = "main"
+optional = false
+python-versions = "^3.10"
+develop = true
+
+[package.dependencies]
+xyz_lib_b = "0.1.0"
+
+[package.source]
+type = "directory"
+url = "../../libs/xyz_lib_a"
+
+[[package]]
 name = "xyz-lib-b"
 version = "0.1.0"
 description = ""
@@ -203,7 +219,7 @@ xyz_lib_c = "0.1.0"
 
 [package.source]
 type = "directory"
-url = "../xyz_lib_b"
+url = "../../libs/xyz_lib_b"
 
 [[package]]
 name = "xyz-lib-c"
@@ -219,12 +235,12 @@ pydantic = "^1.8.2"
 
 [package.source]
 type = "directory"
-url = "../xyz_lib_c"
+url = "../../libs/xyz_lib_c"
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "7b79151b793b15dbd9d99cbd15f036fadb2e5de05f051cf9da149a463735550c"
+content-hash = "650b365dbe713b3a11926fb1196f8084420f9ea336df3b887cd9d37f8d6d4e0b"
 
 [metadata.files]
 atomicwrites = [
@@ -328,5 +344,6 @@ urllib3 = [
     {file = "urllib3-1.26.8-py2.py3-none-any.whl", hash = "sha256:000ca7f471a233c2251c6c7023ee85305721bfdf18621ebff4fd17a8653427ed"},
     {file = "urllib3-1.26.8.tar.gz", hash = "sha256:0e7c33d9a63e7ddfcb86780aac87befc2fbddf46c58dbb487e0855f7ceec283c"},
 ]
+xyz-lib-a = []
 xyz-lib-b = []
 xyz-lib-c = []
