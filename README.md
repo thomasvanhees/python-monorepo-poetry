@@ -9,11 +9,12 @@ Welcome!
     - `poetry`, installed via `pipx install poetry`. This should give you `poetry` with version 1.1.X.
         - Ran `poetry config virtualenvs.in-project true`
     - `pre-commit`, installed via `pipx install pre-commit`.
+    - `black`, installed via `pipx install black`.
 
 ## How is this monorepo structured?
 
 - `libs`: Contains Python packages that function as libraries, i.e., packages that every project can depend upon. Libraries can also depend upon each other.
-- `projects`: Actual applications that can be deployed elsewhere.
+- `apps`: Actual applications that can be deployed elsewhere.
 
 ## How was this monorepo created?
 
