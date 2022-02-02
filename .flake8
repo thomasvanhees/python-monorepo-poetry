@@ -1,0 +1,12 @@
+[flake8]
+min_python_version = 3.7.0
+
+# Black uses 88 by default.
+max-line-length = 88
+
+ban-relative-imports = true
+
+
+extend-exclude =
+    # No need to check tests.
+    **/tests/**,

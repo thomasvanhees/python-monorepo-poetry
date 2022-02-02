@@ -48,3 +48,18 @@ Welcome!
 - Note: the sub-projects automatically add sources roots outside their folder structures based on the path installs you do in the VENV. But that is fine.
 - Create run configurations for every library and application. Also create a compound configuration to run them all. Save as a project file so it can be added to Git. Don't forget to set a `--cov=...` additional argument to get code coverage in the report.
 - The default arguments added for Pytest caused my coverage not to show up, so remove them in the advanced settings.
+- Add `black` as an external tool by following the steps in [this](https://black.readthedocs.io/en/stable/integrations/editors.html#pycharm-intellij-idea) link. Basically just add it as an external tool. I also like to map the invocation to `ctrl + \ `.
+
+# Flake8
+
+Lints your code, i.e., make sure that is syntactically correct. Black will also kind of do this already since it will fail if cannot run due to syntax errors.
+Flake8 is alot more extensive though. Use [this](https://flake8.pycqa.org/en/latest/user/configuration.html) link for the configuration details.
+
+I've added a `.flake8` config file in the root of the repo that the pre-commit hook will use. My settings are mostly based on the Poetry repository, which is a treasure trove https://github.com/python-poetry/poetry/blob/master/.pre-commit-config.yaml. This list is also pretty good: https://github.com/DmytroLitvinov/awesome-flake8-extensions.
+
+Plugins:
+
+- `flake8-docstrings`: https://github.com/pycqa/flake8-docstrings. Adds pydocstyle to Flake8. Checks that your docstrings are correctly configured. Use https://www.pydocstyle.org/en/latest/error_codes.html#grouping.
+- `flake8-bugbear`: https://github.com/PyCQA/flake8-bugbear. Finds bugs and design problems.
+- `pep8-naming`: https://github.com/PyCQA/pep8-naming. Checks that names adhere to PEP8 standards.
+- `flake8-bultins`: https://github.com/gforcada/flake8-builtins. Checks that variable names are not built-in keywords.
